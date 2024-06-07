@@ -32,6 +32,20 @@ const Main = () => {
             <img src={assets.code_icon} alt="compass_icon" />
           </div>
         </div>
+        <div className="main-bottom">
+          <div className="search-box">
+            <input type="text" placeholder="Enter prompt here" />
+            <div>
+              <img src={assets.gallery_icon} alt="gallery_icon" />
+              <img src={assets.mic_icon} alt="mic_icon" />
+              <img src={assets.send_icon} alt="send_icon" />
+            </div>
+          </div>
+          <p className="bottom-info">
+            Gemini may display inaccurate info, including about people, so
+            double-check its responses. Your privacy and Gemini Apps
+          </p>
+        </div>
       </div>
     </div>
   );
