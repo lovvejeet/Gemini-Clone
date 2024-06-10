@@ -19,7 +19,6 @@ const Main = () => {
         <img src={assets.user_icon} alt="user_icon" />
       </div>
       <div className="main-container">
-        \
         {!showResult ? (
           <>
             {" "}
@@ -50,7 +49,22 @@ const Main = () => {
           </>
         ) : (
           <div className="result">
-            <div className="result-title"></div>
+            <div className="result-title">
+              <img src={assets.user_icon} alt="user_icon" />
+              <p>{recentPrompt}</p>
+            </div>
+            <div className="result-data">
+              <img src={assets.gemini_icon} alt="gemini_icon" />
+              {loading ? (
+                <div className="loader">
+                  <hr />
+                  <hr />
+                  <hr />
+                </div>
+              ) : (
+                <p dangerouslySetInnerHTML={{ __html: resultDate }}></p>
+              )}
+            </div>
           </div>
         )}
         <div className="main-bottom">
