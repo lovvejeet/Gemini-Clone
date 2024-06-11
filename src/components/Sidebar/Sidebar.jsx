@@ -1,4 +1,4 @@
-import "./sidebar.css";
+import "../Sidebar/sidebar.css";
 import { assets } from "../../assets/assets";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
@@ -22,17 +22,14 @@ const Sidebar = () => {
         {extented ? (
           <div className="recent">
             <p className="recent-title">Recent</p>
-            {prevPrompt.map((item,index)=>{
-              return(
+            {prevPrompt.map((item, index) => {
+              return (
                 <div className="recent-entry">
-                <img src={assets.message_icon} alt="message_icon" />
-                <p>{item}...</p>
-              </div>
-              )
-
+                  <img src={assets.message_icon} alt="message_icon" />
+                  <p>{item}...</p>
+                </div>
+              );
             })}
-            
-
           </div>
         ) : null}
       </div>
